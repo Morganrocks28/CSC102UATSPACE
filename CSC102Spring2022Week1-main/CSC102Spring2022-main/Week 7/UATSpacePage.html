@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    created by Morgan Soetaert
+    01/10/22
+    for CSC102 class
+    morsoeta@uat.edu
+    tagV1.html this is a file to test the use of tags in html as well as some beginning javascript functions. 
+    The javascript funsctions are document.write() and alert().
+-->
+    <head>
+        <script src="code.js"></script>
+        <link href ="style.css" rel = "stylesheet">
+        <!--This is the head portion, it is behind the scenes...-->
+        <title>
+            Prof Prater's UATSpace Page
+        </title>       
+    </head>
+
+    <body>
+        <table>
+            <td><img src="UATspaceLogo-1.jpg"></td>
+            <td><h1>UAT Space Program</h1></td>
+        </table>
+        <table id = "data" border="2" width="70%">
+            <col style="width: 35%">
+            <col style="width: 35%">
+            <thead>
+                <th>Data Type</th>
+                <th>Reading</th>
+            </thead>
+            <tbody>
+                <tr id="seconds"><td>Time Elapsed:</td><td>15 seconds</td></tr>
+                <tr id="latitude"><td>Latitude:</td><td>0</td></tr>
+                <tr id="longitude"><td>Longitude:</td><td>0</td></tr>
+                <tr id="gpsSensor_alt"><td>GPS altitude:</td><td>0</td></tr>
+                <tr id="bmpSensor_alt"><td>bmp altitude:</td><td>30383.04</td></tr>
+                <tr id="bmpSensor_pres"><td>bmp pressure:</td><td>2.34</td></tr>
+                <tr id="bmpSensor_temp"><td>bmp temperature:</td><td>0</td></tr>
+                <tr id="digSensor_temp"><td>digital temperature:</td><td>24.12</td></tr>
+                <tr id="cssSensor_temp"><td>CSS temperature:</td><td>25</td></tr>
+                <tr id="cssSensor_eCO2"><td>CSS eCO2:</td><td>400</td></tr>
+                <tr id="cssSensor_TVOC"><td>CSS TVOC:</td><td>0</td></tr>
+                <tr id="UV"><td>UV:</td><td>0</td></tr>
+                <tr id="accelX"><td>accelX:</td><td>-0.87</td></tr>
+                <tr id="accelY"><td>accelY:</td><td>-0.02</td></tr>
+                <tr id="accelZ"><td>accelZ:</td><td>9.61</td></tr>
+                <tr id="magneticX"><td>magneticX:</td><td>0.13</td></tr>
+                <tr id="magneticY"><td>magneticY:</td><td>0.57</td></tr>
+                <tr id="magneticZ"><td>magneticZ:</td><td>-0.24</td></tr>
+                <tr id="gyroX"><td>gyroX:</td><td>4.66</td></tr>
+                <tr id="gyroY"><td>gyroY:</td><td>0.01</td></tr>
+                <tr id="gyroZ"><td>gyroZ:</td><td>-0.4</td></tr>
+            </tbody>
+        </table>
+
+      
+
+        <script>
+            // The document.write() prints the text on the main body of the webpage. 
+            document.write("This is a test of the document.write function"); 
+            /* The alert function opens an alert window. 
+            The text within the alert window orginates from inside the parenthesis. */
+            //alert ("This is a test of the alert function.");
+        </script>
+       
+       
+        <br>
+        <button id="startButton" onclick ="start()">
+            Start
+        </button>
+
+        <button id="stopButton" onclick="stop()">
+            Stop
+        </button>
+        <br>
+        <br>
+        <br>
+        <script>
+            var docText = "This is the contents of my doctext variable";
+            var addText = " and I like it";
+            document.write(docText + addText);
+        </script>
+<p>Extra Credit</p>
+<p>Here's the <a href="https://www.uattech.com/mission-5.-uat-in-space" target="_blank">UAT Space Page</a></p>
+        <br>
+        <br>
+        <br>
+        <!--Puts a header that says Let's Play Craps-->
+        <h2 id="blink">Let's Play Craps</h2>
+        <script type="text/javascript">
+            var blink = document.getElementById('blink');
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+            }, 500);
+        </script>
+        <!--Says the words Craps Results-->
+        <div id="crapsRes">Craps Results</div>
+         <!--Says the words Result for die1-->
+        <div id="die1Res">Result for die1</div>
+         <!--Says the words Result for die1-->
+        <div id="die2Res">Result for die2</div>
+         <!--Says the words Result for die2-->
+        <div id="sumRes">Sum of the 2 dice</div>
+        <br>
+        <!--Starts the playCraps function-->
+        <button onclick ="playCraps();" class="button">Play Craps</button>
+    </body>
+
+</html>
